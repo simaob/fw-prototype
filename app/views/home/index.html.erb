@@ -1,37 +1,4 @@
-<section class="m-header-static">
-  <div class="inner">
-    <header>
-      <h2>Forest Watcher 2.0</h2>
-    </header>
-  </div>
-</section>
 
 <% unless @current_user %>
-  <section class="section" id="user-profile">
-    <div class="my-gfw-profile inner">
-      <div class="my-gfw-login">
-        <h2>Please log in</h2>
-        <ul class="my-gfw-authentication">
-          <li class="my-gfw-sign-in-twitter">
-            <a href="<%= ENV['API_URL'] %>/auth/twitter?token=true&callbackUrl=<%= auth_login_url %>" class="my-gfw-sign-in my-gfw-sign-in-twitter">
-              <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg>
-              Log in with Twitter
-            </a>
-          </li>
-          <li class="my-gfw-sign-in-facebook">
-            <a href="<%= ENV['API_URL'] %>/auth/facebook?token=true&callbackUrl=<%= auth_login_url %>" class="my-gfw-sign-in">
-              <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
-              Log in with Facebook
-            </a>
-          </li>
-          <li class="my-gfw-sign-in-google">
-            <a href="<%= ENV['API_URL'] %>/auth/google?token=true&callbackUrl=<%= auth_login_url %>" class="my-gfw-sign-in">
-              <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-googleplus"></use></svg>
-              Log in with Google
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <%= render 'shared/login' %>
 <% end %>

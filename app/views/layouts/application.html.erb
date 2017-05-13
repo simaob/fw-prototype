@@ -10,6 +10,16 @@
 
   <body>
     <%= render 'shared/icons' %>
+    <section class="m-header-static">
+      <div class="inner">
+        <header>
+          <h2>Forest Watcher 2.0</h2>
+        </header>
+      </div>
+    </section>
+    <% if @current_user %>
+      <%= render 'shared/navigation' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

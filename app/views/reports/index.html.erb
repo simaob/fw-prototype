@@ -1,0 +1,6 @@
+<ul>
+  <% @reports.each do |report| %>
+    <% attr = report["attributes"] %>
+    <li><%= attr["name"] %> Download</li>
+  <% end %>
+</ul>

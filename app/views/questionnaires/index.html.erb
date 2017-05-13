@@ -1,0 +1,6 @@
+<ul>
+  <% @questionnaires.sort{|a,b| a["attributes"]["name"] <=> b["attributes"]["name"]}.each do |questionnaire| %>
+    <% attr = questionnaire["attributes"] %>
+    <li><%= link_to attr["name"], report_path(questionnaire["id"]) %></li>
+  <% end %>
+</ul>

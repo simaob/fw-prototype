@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  resources :reports, only: [:index, :show]
+  resources :areas, only: [:index]
+  resources :questionnaires, only: [:index]
   # Auth
   get 'auth/login', to: 'auth#login'
   get 'auth/logout', to: 'auth#logout'

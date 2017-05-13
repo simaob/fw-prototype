@@ -1,0 +1,14 @@
+<% @report.each do |r|  %>
+  <% attr = r["attributes"] %>
+  <p>
+    <strong>Answer ID</strong><br />
+    <%= r["id"] %>
+  </p>
+  <% attr["responses"].each do |resp| %>
+    <p>
+      <strong><%= resp["question"].titleize %></strong><br />
+      <%= resp["value"] %>
+    </p>
+  <% end %>
+  <hr />
+<% end %>

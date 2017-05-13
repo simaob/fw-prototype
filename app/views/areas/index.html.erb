@@ -1,0 +1,6 @@
+<ul>
+  <% @areas.each do |area| %>
+    <% attr = area["attributes"] %>
+    <li><%= attr["name"] %> <%= image_tag attr["image"], size: "200x200" %></li>
+  <% end %>
+</ul>
