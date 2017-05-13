@@ -1,5 +1,23 @@
-<ul>
-  <li><%= link_to 'Areas', areas_path %></li>
-  <li><%= link_to 'Reports', reports_path %></li>
-  <li><%= link_to 'Questionnaires', questionnaires_path %></li>
-</ul>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Forest Watcher 2.0</a>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item <%= "active" if controller_name == 'home' %>">
+        <%= link_to "Home", root_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item <%= "active" if controller_name == 'areas' %>">
+        <%= link_to "Areas", areas_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item <%= "active" if controller_name == 'reports' %>">
+        <%= link_to "Reports", reports_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item <%= "active" if controller_name == 'questionnaires' %>">
+        <%= link_to "Questionnaires", questionnaires_path, class: "nav-link" %>
+      </li>
+    </ul>
+  </div>
+</nav>
